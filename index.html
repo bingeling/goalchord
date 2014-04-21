@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+
+		<!-- http://www.paulirish.com/2009/avoiding-the-fouc-v3/ -->
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pittsburgh Penguins Goals Chord Diagram</title>
+    <meta name="description" content="chord diagram showing the frequency with which players of the Pittsburgh Penguins worked together for goals during the 2013/2014 season">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="build/goalchord.css">
+		<script src="js/libs/prefixfree.min.js"></script>
+  </head>
+  <body>
+		<article>
+			<header>
+				<h1>Pittsburgh Penguins Goal Connections</h1>
+			</header>
+
+			<div class="js-notify">
+				<h2>Here would usually be a chord diagram :(</h2>
+				<p>It's a data visualization of which players of the Pittsburgh Penguins worked together for goals. JavaScript is needed for that.</p>
+				<p>There are a few different reasons why JavaScript isn't working in your browser. Could be that you disabled it on purpose, that something is blocking JavaScript code for you, or it's some existing error in a browser extensions or something. </p>
+			</div>
+
+			<section id="visualization">
+				<div class="diagram"></div>
+
+				<figure>
+				  data from the 2013/2014 regular season,
+				  <span class="total"></span> goals counted,
+				  last goal added: <span class="last"></span>.
+				</figure>
+
+				<div class="primer">
+					<h3>Primer</h3>
+					<ul>
+						<li>Every Pittsburgh Penguins player from the 2013/2014 roster with at least a point is represented in this diagram.</li>
+						<li>The size of a player's arc is determined by the number of connections the player has.</li>
+						<li>Each chord (the lines inside the circle) connects two players who appeared together on the score sheet. The thickness of the chord is determined by the frequency of those connections.</li>
+						<li>Currently, connections are defined as follows: If player A scores a goal assisted by player B and player C, it creates a connection between A and B, A and C and B and C.</li>
+						<li>Clicking on a player highlights his connections.</li>
+						<li>Hovering over a player's arc shows his points and number of goals.</li>
+						<li>Hovering over a chord provides more info on this specific connection, though often the lines are so thin that they're hard to target. I'm aware of that and if I can figure out a better solution for this I will fix it.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="about">
+				<h3>About</h3>
+				<p>The sum of all goals scored by the Pittsburgh Penguins is represented in this chart, though the focus lies on the frequency with which players work together for goals, not the goals themselves. It's just an experiment, I was curious what it would look like. Conclusion: data size too large for this type of visualization, but still interesting. And I've put it online because, well, done the work, may as well share it.</p>
+				<p>Made with <a href="http://d3js.org/">d3.js</a>. Shout out to <a href="http://www.delimited.io/blog/2013/12/8/chord-diagrams-in-d3">this blog post</a> by Steve Hall, it was a big help in understanding how chord diagrams work in d3.</p>
+			</section>
+
+		</article>
+		<footer>
+			<p>If you want to contact me, <a href="mailto:bing@bingdom.de">bing@bingdom.de</a> is the email.</p>
+		</footer>
+
+
+    <script src="build/goalchord.min.js"></script>
+
+  </body>
+</html>

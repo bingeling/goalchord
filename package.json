@@ -1,0 +1,13 @@
+{
+  "name": "goalchord",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-htmlhint": "*",
+    "grunt-contrib-jshint": "*"
+  }
+}

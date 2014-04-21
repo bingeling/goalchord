@@ -1,0 +1,171 @@
+body {
+  border-top: .4em solid #b8ab1e;
+  background: #f9f9f9;
+  color: #35342d;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+a {
+  color: #445369;
+  text-decoration: none;
+  border: 1px dotted transparent;
+  border-bottom-color: #445369;
+}
+a:hover,
+a:focus,
+a:active {
+  border: 1px dotted #445369;
+}
+a:visited {
+  color: #595f69;
+  border-bottom-color: #595f69;
+}
+
+
+
+/* TYPE */
+
+h1 {
+  font-size: 2.4em;
+  line-height: 1;
+  margin: 0 0 .1em 0;
+  text-rendering: optimizeLegibility;
+}
+
+h2 {
+  font-size: 1.8em;
+  line-height: 1.2;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+h3 {
+  font-size: 1.4em;
+  line-height: 1.2;
+  margin: 2.8em 0 .65em 0;
+  text-rendering: optimizeLegibility;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.4;
+  font-weight: bold;
+  margin: 0;
+}
+
+p {
+  margin: .7em 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0 0 0 1.2em;
+}
+
+figure {
+  margin: 0;
+  font-size: .95em;
+  font-style: italic;
+  color: #696659;
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+dt, dd {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+dt {
+  clear: left;
+  padding-right: .3em;
+  font-weight: bold;
+}
+
+
+
+
+
+/* STRUCTURE */
+
+article {
+  width: 90%;
+  max-width: 47em;
+  margin: 0 auto;
+  padding: 2em 0 4em 0;
+  overflow: visible;
+}
+article:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: #fff;
+  top: .4em;
+  left: 0;
+  right: 0;
+}
+
+footer {
+  font-size: .95em;
+  background: #d9d9d4;
+  padding: .5em 1.5em;
+}
+
+header {
+  padding: 0 0 2.5em 0;
+}
+
+
+#visualization,
+.diagram {
+  position: relative;
+}
+/* The chard diagram width is in pixel, that number is wider 
+   than the max-width of the content (which is in em).
+   This will offset the difference, so the diagram is centered. */
+.diagram {
+  left: calc((980px - 47em) / 2 * -1);
+}
+
+
+
+/* VIZ */
+
+#circle path {
+  transition: opacity 350ms ease;
+}
+#circle path.chord {
+  stroke: #000;
+  stroke-width: .20px;
+}
+#circle path.fade {
+  opacity: .05;
+}
+
+#circle g.player {
+  cursor: pointer;
+}
+
+
+
+/* JAVASCRIPT ON/OFF STYLING */
+
+html.no-js #quickstats,
+html.no-js #visualization .diagram {
+  display: none;
+}
+html.js .js-notify {
+  display: none;
+}
+
+.js-notify {
+  background: #d9d9d4;
+  border: 1px solid #35342d;
+  padding: 1em;
+  margin: 0 0 2em 0;
+}
