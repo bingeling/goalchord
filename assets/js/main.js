@@ -1,4 +1,4 @@
-d3.csv("../data/pensgoals.csv").get(setup);
+d3.csv("data/pensgoals.csv").get(setup);
 
 function setup(error, rows) {
     if (!error) {
