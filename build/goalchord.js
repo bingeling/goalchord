@@ -9741,7 +9741,7 @@ var dataVisualizer = (function () {
         drawChordDiagram: drawChords
     };
 }());
-d3.csv("../data/pensgoals.csv").get(setup);
+d3.csv("data/pensgoals.csv").get(setup);
 
 function setup(error, rows) {
     if (!error) {
@@ -9750,7 +9750,7 @@ function setup(error, rows) {
 
         dataMapper.setSource(rows);
 
-        if (!document.createElement('svg').getAttributeNS) {
+        if (document.createElement('svg').getAttributeNS) {
             // proceed if the browser supports the SVG element
             var matrix = dataMapper.getPlayerMatrix();
             dataVisualizer.drawChordDiagram(matrix);
