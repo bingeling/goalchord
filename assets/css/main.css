@@ -122,13 +122,13 @@ header {
 
 
 #visualization,
-.diagram {
+#diagram {
   position: relative;
 }
 /* The chard diagram width is in pixel, that number is wider 
    than the max-width of the content (which is in em).
    This will offset the difference, so the diagram is centered. */
-.diagram {
+#diagram {
   left: calc((980px - 47em) / 2 * -1);
 }
 
@@ -156,7 +156,7 @@ header {
 /* JAVASCRIPT ON/OFF STYLING */
 
 html.no-js #quickstats,
-html.no-js #visualization .diagram {
+html.no-js #diagram {
   display: none;
 }
 html.js .js-notify {

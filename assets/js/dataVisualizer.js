@@ -66,7 +66,7 @@ var dataVisualizer = (function () {
 
         // creates the svg element and appends it to the DOM tree
         // translates the coordinate system to the center of the element instead of top left
-        var svg = d3.select("#visualization .diagram").append("svg")
+        var svg = d3.select("#diagram").append("svg")
             .attr("width", width)
             .attr("height", height)
             .append("g")
