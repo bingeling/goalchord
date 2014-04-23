@@ -42,8 +42,8 @@ module.exports = function(grunt){
                 tasks: ['htmlhint']
             },
             js: {
-                files: ['assets/js/base.js'],
-                tasks: ['uglify']
+                files: ['assets/js/**/*.js'],
+                tasks: ['concat', 'uglify']
             },
             css: {
                 files: ['assets/css/**/*.css'],
